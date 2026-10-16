@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" width="100%" height="100%">
+  <defs>
+    <linearGradient id="iconPlateGrad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="50%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="iconLeafGrad" x1="20" y1="46" x2="44" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#166534"/>
+      <stop offset="40%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="iconSproutSecondary" x1="32" y1="36" x2="48" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#166534" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Recovery Plate Ring -->
+  <circle cx="32" cy="32" r="28" stroke="#e2e8f0" stroke-width="2" opacity="0.6"/>
+  <path d="M12 32 A 20 20 0 0 1 52 32" stroke="url(#iconPlateGrad)" stroke-width="3.5" stroke-linecap="round" filter="url(#iconGlow)"/>
+  <path d="M52 32 A 20 20 0 0 1 20 48" stroke="url(#iconPlateGrad)" stroke-width="2.5" stroke-dasharray="3 2" stroke-linecap="round"/>
+
+  <!-- AI Nodes & Data Circuit Interconnects -->
+  <line x1="12" y1="32" x2="22" y2="32" stroke="#15803d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="52" y1="32" x2="42" y2="32" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="32" y1="12" x2="32" y2="20" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round"/>
+
+  <circle cx="12" cy="32" r="3" fill="#15803d"/>
+  <circle cx="12" cy="32" r="1.5" fill="#ffffff"/>
+
+  <circle cx="52" cy="32" r="3" fill="#22c55e"/>
+  <circle cx="52" cy="32" r="1.5" fill="#ffffff"/>
+
+  <circle cx="32" cy="12" r="2.5" fill="#4ade80"/>
+  <circle cx="32" cy="12" r="1" fill="#ffffff"/>
+
+  <circle cx="20" cy="48" r="2.5" fill="#166534"/>
+  <circle cx="20" cy="48" r="1" fill="#ffffff"/>
+
+  <!-- Central Primary Leaf -->
+  <path d="M32 46 C28 38 23 30 23 22 C31 22 39 27 39 36 C39 42 35 45 32 46 Z" fill="url(#iconLeafGrad)"/>
+  
+  <!-- Secondary Leaf Accent -->
+  <path d="M32 37 C34 32 39 27 45 26 C46 31 43 36 38 38 C35 39 33 38 32 37 Z" fill="url(#iconSproutSecondary)" opacity="0.95"/>
+
+  <!-- Leaf Vein / Neural Circuit Spine -->
+  <path d="M26 32 C30 33 34 31 36 28" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="36" cy="28" r="1" fill="#ffffff"/>
+  
+  <!-- Root Anchor Node -->
+  <circle cx="32" cy="46" r="2" fill="#15803d"/>
+</svg>

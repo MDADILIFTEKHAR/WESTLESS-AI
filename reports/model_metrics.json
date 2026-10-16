@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "model_version": "1.0.0",
+    "model_type": "Ridge Regression",
+    "trained_at": "2026-10-16T00:31:58.110187",
+    "target_variable": "food_waste_kg",
+    "validation_methodology": "Chronological 80/20 held-out split (no temporal leakage)",
+    "total_records": 911,
+    "train_sample_count": 728,
+    "test_sample_count": 183,
+    "train_date_range": [
+      "2022-01-01",
+      "2024-02-28"
+    ],
+    "test_date_range": [
+      "2024-02-29",
+      "2024-09-26"
+    ]
+  },
+  "features": {
+    "numeric": [
+      "meals_served",
+      "kitchen_staff",
+      "temperature_C",
+      "humidity_percent",
+      "day_of_week",
+      "special_event",
+      "past_waste_kg"
+    ],
+    "categorical": [
+      "staff_experience",
+      "waste_category"
+    ],
+    "leakage_prevention_note": "In real institutional kitchens, meals_served is provided as 'planned_meals' or expected diners, so predictions remain strictly pre-meal without future knowledge."
+  },
+  "model_comparison": {
+    "Baseline (Median Dummy)": {
+      "mae": 12.6993,
+      "rmse": 25.5758,
+      "r2": -0.0053
+    },
+    "Ridge Regression": {
+      "mae": 4.7179,
+      "rmse": 7.222,
+      "r2": 0.9198
+    },
+    "Random Forest Regressor": {
+      "mae": 5.1736,
+      "rmse": 7.9373,
+      "r2": 0.9032
+    },
+    "HistGradientBoosting Regressor": {
+      "mae": 5.7925,
+      "rmse": 8.9016,
+      "r2": 0.8782
+    }
+  },
+  "selected_model_metrics": {
+    "mae": 4.7179,
+    "rmse": 7.222,
+    "r2": 0.9198
+  },
+  "limitations": [
+    "Trained on institutional/mess tabular records; performance on fine-dining restaurants may require fine-tuning.",
+    "High variance during unannounced holidays or sudden student mass-absences.",
+    "Estimates carry uncertainty intervals; predictions should always be coupled with a safety stock buffer."
+  ]
+}

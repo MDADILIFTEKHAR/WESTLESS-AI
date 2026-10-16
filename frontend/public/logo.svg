@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" fill="none" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fullPlateGrad" x1="6" y1="6" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="50%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="fullLeafGrad" x1="16" y1="44" x2="40" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#166534"/>
+      <stop offset="40%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="fullAiBadge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="fullGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#166534" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- LOGO ICON MARK (Left: 0 - 56) -->
+  <g transform="translate(4, 4)">
+    <!-- Plate base -->
+    <circle cx="28" cy="28" r="25" stroke="#e2e8f0" stroke-width="1.8" opacity="0.7"/>
+    <!-- Recovery Arc -->
+    <path d="M10 28 A 18 18 0 0 1 46 28" stroke="url(#fullPlateGrad)" stroke-width="3.2" stroke-linecap="round" filter="url(#fullGlow)"/>
+    <path d="M46 28 A 18 18 0 0 1 17 42" stroke="url(#fullPlateGrad)" stroke-width="2.2" stroke-dasharray="3 2" stroke-linecap="round"/>
+
+    <!-- Nodes -->
+    <circle cx="10" cy="28" r="2.8" fill="#15803d"/>
+    <circle cx="10" cy="28" r="1.3" fill="#ffffff"/>
+
+    <circle cx="46" cy="28" r="2.8" fill="#22c55e"/>
+    <circle cx="46" cy="28" r="1.3" fill="#ffffff"/>
+
+    <circle cx="28" cy="10" r="2.2" fill="#4ade80"/>
+    <circle cx="28" cy="10" r="1" fill="#ffffff"/>
+
+    <!-- Sprout / Leaf -->
+    <path d="M28 40 C24 33 20 26 20 19 C27 19 34 23 34 31 C34 36 31 39 28 40 Z" fill="url(#fullLeafGrad)"/>
+    <path d="M28 32 C30 28 34 24 39 23 C40 27 38 31 33 33 C31 34 29 33 28 32 Z" fill="#4ade80" opacity="0.9"/>
+    <path d="M23 27 C26 28 30 26 31 24" stroke="#ffffff" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="28" cy="40" r="1.8" fill="#15803d"/>
+  </g>
+
+  <!-- WORDMARK: WasteLess AI -->
+  <text x="68" y="36" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#0f172a" letter-spacing="-0.5">
+    Waste<tspan fill="#15803d">Less</tspan>
+  </text>
+
+  <!-- AI Badge -->
+  <g transform="translate(182, 17)">
+    <rect x="0" y="0" width="34" height="22" rx="6" fill="url(#fullAiBadge)"/>
+    <text x="7" y="16" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="900" fill="#ffffff" letter-spacing="0.5">AI</text>
+    <circle cx="27" cy="7" r="2" fill="#86efac"/>
+  </g>
+
+  <!-- Subtitle Tagline -->
+  <text x="69" y="50" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="600" fill="#64748b" letter-spacing="0.4">
+    FOOD WASTE PREVENTION &amp; RECOVERY
+  </text>
+</svg>
